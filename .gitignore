@@ -24,3 +24,11 @@
 /configure.log
 
 .DS_Store
+
+win32/.vs/
+
+win32/Debug/
+win32/Release/
+win32/x64/
+*.sdf
+*.VC.opendb
