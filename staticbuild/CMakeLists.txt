@@ -53,6 +53,7 @@ set(ZLIB_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
 include_directories(${ZLIB_SOURCE_DIR})
 
+if(NOT UNIX)
 if(NOT ZLIB_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
     # If we're doing an out of source build and the user has a zconf.h
     # in their source tree...
@@ -64,6 +65,7 @@ if(NOT ZLIB_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
         file(RENAME ${ZLIB_SOURCE_DIR}/zconf.h ${ZLIB_SOURCE_DIR}/zconf.h.included)
   endif()
 endif()
+endif(NOT UNIX)
 
 set(ZLIB_PC ${CMAKE_CURRENT_BINARY_DIR}/zlib.pc)
 configure_file( ${ZLIB_SOURCE_DIR}/zlib.pc.cmakein
