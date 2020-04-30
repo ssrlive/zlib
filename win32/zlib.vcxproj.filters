@@ -96,7 +96,7 @@
     <ClInclude Include="..\trees.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\zconf.h">
+    <ClInclude Include=".\zconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\zlib.h">
